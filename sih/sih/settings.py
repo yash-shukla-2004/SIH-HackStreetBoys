@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'judges.apps.JudgesConfig',
+    'static.apps.StaticConfig',
+    'livestream.apps.LivestreamConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,15 +78,11 @@ WSGI_APPLICATION = 'sih.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-     'postgre-sql': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sampledata',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # Or your database host
+        'USER': 'yash',
+        'PASSWORD': 'Hackstreet123!',
+        'HOST': 'sih123.postgres.database.azure.com',  # Or your database host
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
